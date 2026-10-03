@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZooMAT | Zoológico Miguel Álvarez del Toro</title>
+    <meta name="description" content="Zoológico Miguel Álvarez del Toro en la Reserva Natural El Zapotal, Tuxtla Gutiérrez, Chiapas. Conoce la fauna silvestre chiapaneca.">
+    <meta name="author" content="Leonardo García López">
+
+    <!-- Tipografías de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Cinzel:wght@600;700;900&display=swap" rel="stylesheet">
+
+    <!-- Íconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Nuestros estilos (siempre al final) -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ===== BARRA DE NAVEGACIÓN ===== -->
+    <nav class="navbar">
+        <div class="navbar__contenedor">
+
+            <a href="index.html" class="navbar__logo">
+                <span class="navbar__logo-icono">
+                    <img src="img/jaguar.jpg" alt="">
+                </span>
+                <span>
+                    <span class="navbar__logo-titulo">ZooMAT</span>
+                    <span class="navbar__logo-subtitulo">Reserva El Zapotal</span>
+                </span>
+            </a>
+
+            <button class="navbar__toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="navbar__menu" id="menu">
+                <li><a href="mapa.html" class="navbar__link"><i class="fa-solid fa-map"></i> Mapa</a></li>
+                <li><a href="fauna.html" class="navbar__link"><i class="fa-solid fa-paw"></i> Fauna</a></li>
+                <li><a href="trivia.html" class="navbar__link"><i class="fa-solid fa-graduation-cap"></i> Trivia</a></li>
+                <li><a href="visitanos.html" class="navbar__boton"><i class="fa-solid fa-route"></i> Visítanos</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <!-- ===== PORTADA ===== -->
+    <header class="hero">
+        <img src="img/selva.jpg" alt="" class="hero__fondo">
+
+        <div class="hero__contenido">
+            <p class="hero__lugar">Reserva Natural El Zapotal, Tuxtla Gutiérrez, Chiapas</p>
+
+            <h1 class="hero__titulo">Zoológico Miguel Álvarez del Toro</h1>
+
+            <p class="hero__descripcion">
+                Conservación, rescate e investigación de la fauna silvestre
+                chiapaneca, en el corazón de la selva.
+            </p>
+
+            <div class="hero__botones">
+                <a href="mapa.html" class="boton boton--primario">Explorar el mapa</a>
+                <a href="visitanos.html" class="boton boton--claro">Cómo llegar</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== PIE DE PÁGINA ===== -->
+<footer class="pie">
+    <div class="pie__contenedor">
+        <div class="pie__marca">
+            <span class="navbar__logo-icono">
+                <img src="img/jaguar.jpg" alt="">
+            </span>
+            <div>
+                <p class="pie__titulo">ZooMAT</p>
+                <p class="pie__texto">
+                    Zoológico Miguel Álvarez del Toro.
+                    Reserva Natural El Zapotal, Tuxtla Gutiérrez, Chiapas.
+                </p>
+            </div>
+        </div>
+
+        <div>
+            <h2 class="pie__subtitulo">Privacidad</h2>
+            <p class="pie__texto">
+                Este sitio no recopila, almacena ni envía datos personales.
+                El nombre que escribes en la trivia se usa solo para generar tu diploma
+                en tu propio navegador, y se borra al salir de la página.
+            </p>
+        </div>
+
+        <div>
+            <h2 class="pie__subtitulo">Créditos</h2>
+            <p class="pie__texto">
+                Ilustración de la selva: autor en
+                <a href="https://www.freepik.com" target="_blank" rel="noopener">Freepik</a>.
+                Íconos: Font Awesome.
+            </p>
+        </div>
+    </div>
+
+    <div class="pie__legal">
+        <p>&copy; <span id="anio">2026</span> Leonardo García López. Diseño y desarrollo.</p>
+        <p>Proyecto académico sin fines de lucro. No es el sitio oficial del Zoológico Miguel Álvarez del Toro.</p>
+    </div>
+</footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

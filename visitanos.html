@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planea tu visita | ZooMAT</title>
+    <meta name="description" content="Cómo llegar al ZooMAT, datos del andador y recomendaciones para tu visita a la Reserva Natural El Zapotal.">
+    <meta name="author" content="Leonardo García López">
+
+    <!-- Tipografías de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Cinzel:wght@600;700;900&display=swap" rel="stylesheet">
+
+    <!-- Íconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Nuestros estilos (siempre al final) -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ===== BARRA DE NAVEGACIÓN ===== -->
+    <nav class="navbar">
+        <div class="navbar__contenedor">
+
+            <a href="index.html" class="navbar__logo">
+                <span class="navbar__logo-icono">
+                    <img src="img/jaguar.jpg" alt="">
+                </span>
+                <span>
+                    <span class="navbar__logo-titulo">ZooMAT</span>
+                    <span class="navbar__logo-subtitulo">Reserva El Zapotal</span>
+                </span>
+            </a>
+
+            <button class="navbar__toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="navbar__menu" id="menu">
+                <li><a href="mapa.html" class="navbar__link"><i class="fa-solid fa-map"></i> Mapa</a></li>
+                <li><a href="fauna.html" class="navbar__link"><i class="fa-solid fa-paw"></i> Fauna</a></li>
+                <li><a href="trivia.html" class="navbar__link"><i class="fa-solid fa-graduation-cap"></i> Trivia</a></li>
+                <li><a href="visitanos.html" class="navbar__boton" aria-current="page"><i class="fa-solid fa-route"></i> Visítanos</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <!-- ===== CONTENIDO ===== -->
+    <main class="contenido">
+
+        <section id="recorrido" class="seccion">
+            <div class="seccion__encabezado">
+                <h1 class="seccion__titulo">Planea tu visita</h1>
+                <p class="seccion__intro">
+                    Todo lo que necesitas saber para recorrer la reserva y llegar sin complicaciones.
+                </p>
+            </div>
+
+            <div class="recorrido">
+                <div class="recorrido__info">
+                    <h2 class="recorrido__subtitulo">El andador</h2>
+                    <dl class="ficha">
+                        <div class="ficha__fila">
+                            <dt>Distancia</dt>
+                            <dd>2.5 km</dd>
+                        </div>
+                        <div class="ficha__fila">
+                            <dt>Duración sugerida</dt>
+                            <dd>2.5 a 3.5 horas</dd>
+                        </div>
+                        <div class="ficha__fila">
+                            <dt>Sombra</dt>
+                            <dd>Gran parte bajo la selva</dd>
+                        </div>
+                        <div class="ficha__fila">
+                            <dt>Recomendado llevar</dt>
+                            <dd>Calzado cómodo, agua y repelente</dd>
+                        </div>
+                    </dl>
+
+                    <h2 class="recorrido__subtitulo">Cómo llegar</h2>
+                    <ul class="rutas">
+                        <li class="ruta">
+                            <i class="fa-solid fa-car ruta__icono"></i>
+                            <div>
+                                <h3 class="ruta__titulo">En automóvil</h3>
+                                <p class="ruta__texto">
+                                    El zoológico se encuentra al sur de la ciudad, a unos minutos del centro.
+                                    Cuenta con estacionamiento para visitantes.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="ruta">
+                            <i class="fa-solid fa-taxi ruta__icono"></i>
+                            <div>
+                                <h3 class="ruta__titulo">En taxi</h3>
+                                <p class="ruta__texto">
+                                    Cualquier taxi de la ciudad puede llevarte. Pide que te deje
+                                    en la entrada principal del ZooMAT.
+                                </p>
+                            </div>
+                        </li>
+                        <li class="ruta">
+                            <i class="fa-solid fa-bus ruta__icono"></i>
+                            <div>
+                                <h3 class="ruta__titulo">En transporte público</h3>
+                                <p class="ruta__texto">
+                                    Existen rutas de transporte colectivo que pasan cerca del zoológico.
+                                    Consulta la ruta más conveniente desde tu punto de partida.
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="recorrido__mapa">
+                    <iframe
+                        src="https://maps.google.com/maps?q=Zool%C3%B3gico+Miguel+%C3%81lvarez+del+Toro,+Tuxtla+Guti%C3%A9rrez&output=embed"
+                        title="Ubicación del Zoológico Miguel Álvarez del Toro en Google Maps"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen>
+                    </iframe>
+                    <p class="recorrido__direccion">
+                        <i class="fa-solid fa-location-dot"></i>
+                        Reserva Natural El Zapotal, Tuxtla Gutiérrez, Chiapas
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

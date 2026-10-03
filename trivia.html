@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trivia de la selva | ZooMAT</title>
+    <meta name="description" content="Pon a prueba lo que sabes sobre la fauna de Chiapas y obtén tu diploma de Guardián de la Selva.">
+    <meta name="author" content="Leonardo García López">
+
+    <!-- Tipografías de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Cinzel:wght@600;700;900&display=swap" rel="stylesheet">
+
+    <!-- Íconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Nuestros estilos (siempre al final) -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ===== BARRA DE NAVEGACIÓN ===== -->
+    <nav class="navbar">
+        <div class="navbar__contenedor">
+
+            <a href="index.html" class="navbar__logo">
+                <span class="navbar__logo-icono">
+                    <img src="img/jaguar.jpg" alt="">
+                </span>
+                <span>
+                    <span class="navbar__logo-titulo">ZooMAT</span>
+                    <span class="navbar__logo-subtitulo">Reserva El Zapotal</span>
+                </span>
+            </a>
+
+            <button class="navbar__toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="navbar__menu" id="menu">
+                <li><a href="mapa.html" class="navbar__link"><i class="fa-solid fa-map"></i> Mapa</a></li>
+                <li><a href="fauna.html" class="navbar__link"><i class="fa-solid fa-paw"></i> Fauna</a></li>
+                <li><a href="trivia.html" class="navbar__link" aria-current="page"><i class="fa-solid fa-graduation-cap"></i> Trivia</a></li>
+                <li><a href="visitanos.html" class="navbar__boton"><i class="fa-solid fa-route"></i> Visítanos</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <!-- ===== CONTENIDO ===== -->
+    <main class="contenido">
+
+        <section id="trivia" class="seccion">
+            <div class="seccion__encabezado">
+                <h1 class="seccion__titulo">Trivia de la selva</h1>
+                <p class="seccion__intro">
+                    Responde cinco preguntas sobre la fauna de Chiapas. Con al menos cuatro
+                    respuestas correctas obtendrás tu diploma de Guardián de la Selva.
+                </p>
+            </div>
+
+            <div class="trivia">
+
+                <!-- Pantalla 1: preguntas -->
+                <div id="pantalla-preguntas" class="trivia__tarjeta">
+                    <div class="trivia__progreso">
+                        <p id="trivia-contador" class="trivia__contador"></p>
+                        <div class="trivia__barra">
+                            <div id="trivia-barra-relleno" class="trivia__barra-relleno"></div>
+                        </div>
+                    </div>
+
+                    <h2 id="trivia-pregunta" class="trivia__pregunta"></h2>
+                    <div id="trivia-opciones" class="trivia__opciones"></div>
+                    <p id="trivia-retro" class="trivia__retro" aria-live="polite"></p>
+
+                    <button id="trivia-siguiente" class="boton boton--primario trivia__siguiente" hidden>
+                        Siguiente pregunta
+                    </button>
+                </div>
+
+                <!-- Pantalla 2: resultado -->
+                <div id="pantalla-resultado" class="trivia__tarjeta" hidden>
+                    <h2 id="resultado-titulo" class="trivia__pregunta"></h2>
+                    <p id="resultado-texto" class="trivia__texto"></p>
+
+                    <form id="form-diploma" class="trivia__formulario" hidden>
+                        <label for="nombre-visitante">Escribe tu nombre para el diploma</label>
+                        <input type="text" id="nombre-visitante" maxlength="40" autocomplete="name" required>
+                        <button type="submit" class="boton boton--primario">Generar diploma</button>
+                    </form>
+
+                    <button id="trivia-reintentar" class="boton boton--claro">Intentar de nuevo</button>
+                </div>
+
+                <!-- Pantalla 3: diploma -->
+                <div id="pantalla-diploma" hidden>
+                    <div class="diploma">
+                        <img src="img/jaguar.jpg" alt="" class="diploma__logo">
+                        <p class="diploma__institucion">Zoológico Miguel Álvarez del Toro</p>
+                        <h2 class="diploma__titulo">Reconocimiento</h2>
+                        <p class="diploma__texto">Se otorga a</p>
+                        <p id="diploma-nombre" class="diploma__nombre"></p>
+                        <p class="diploma__texto">
+                            por demostrar su conocimiento sobre la fauna silvestre de Chiapas,
+                            obteniendo el título de
+                        </p>
+                        <p class="diploma__distincion">Guardián de la Selva</p>
+                        <p id="diploma-detalle" class="diploma__detalle"></p>
+                    </div>
+
+                    <div class="diploma__acciones">
+                        <button id="diploma-imprimir" class="boton boton--primario">Imprimir diploma</button>
+                        <button id="diploma-reiniciar" class="boton boton--claro">Jugar otra vez</button>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/trivia.js"></script>
+</body>
+</html>

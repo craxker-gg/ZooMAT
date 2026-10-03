@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa del recorrido | ZooMAT</title>
+    <meta name="description" content="Mapa interactivo del andador del ZooMAT: conoce cada estación del recorrido por la Reserva Natural El Zapotal.">
+    <meta name="author" content="Leonardo García López">
+
+    <!-- Tipografías de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Cinzel:wght@600;700;900&display=swap" rel="stylesheet">
+
+    <!-- Íconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Nuestros estilos (siempre al final) -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ===== BARRA DE NAVEGACIÓN ===== -->
+    <nav class="navbar">
+        <div class="navbar__contenedor">
+
+            <a href="index.html" class="navbar__logo">
+                <span class="navbar__logo-icono">
+                    <img src="img/jaguar.jpg" alt="">
+                </span>
+                <span>
+                    <span class="navbar__logo-titulo">ZooMAT</span>
+                    <span class="navbar__logo-subtitulo">Reserva El Zapotal</span>
+                </span>
+            </a>
+
+            <button class="navbar__toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="navbar__menu" id="menu">
+                <li><a href="mapa.html" class="navbar__link" aria-current="page"><i class="fa-solid fa-map"></i> Mapa</a></li>
+                <li><a href="fauna.html" class="navbar__link"><i class="fa-solid fa-paw"></i> Fauna</a></li>
+                <li><a href="trivia.html" class="navbar__link"><i class="fa-solid fa-graduation-cap"></i> Trivia</a></li>
+                <li><a href="visitanos.html" class="navbar__boton"><i class="fa-solid fa-route"></i> Visítanos</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <!-- ===== CONTENIDO ===== -->
+    <main class="contenido">
+
+        <section id="mapa" class="seccion">
+            <div class="seccion__encabezado">
+                <h1 class="seccion__titulo">Mapa del recorrido</h1>
+                <p class="seccion__intro">
+                    Selecciona una estación del andador para conocer qué encontrarás
+                    en cada área de la reserva.
+                </p>
+            </div>
+
+            <div class="mapa">
+                <div class="mapa__lienzo">
+                    <svg viewBox="0 0 900 600" class="mapa__svg" role="group" aria-label="Mapa del andador del zoológico">
+
+                        <!-- Andador -->
+                        <path class="mapa__sendero"
+                              d="M 120 480 C 112 452, 190 398, 240 360 C 290 322, 357 280, 420 250 C 483 220, 562 173, 620 180 C 678 187, 762 243, 770 290 C 778 337, 722 428, 670 460 C 618 492, 523 468, 460 480 C 397 492, 347 530, 290 530 C 233 530, 128 508, 120 480 Z" />
+
+                        <!-- Entrada -->
+                        <g class="mapa__entrada" transform="translate(62, 480)">
+                            <rect x="-48" y="-17" width="96" height="34" rx="6" />
+                            <text y="6">Entrada</text>
+                        </g>
+
+                        <!-- Estaciones -->
+                        <g class="mapa__estacion" data-estacion="cocodrilo" transform="translate(240, 360)"
+                           tabindex="0" role="button" aria-label="Museo del Cocodrilo">
+                            <circle r="26" />
+                            <text class="mapa__numero" y="9">1</text>
+                            <text class="mapa__etiqueta" y="50">Museo del Cocodrilo</text>
+                        </g>
+
+                        <g class="mapa__estacion" data-estacion="aviario" transform="translate(420, 250)"
+                           tabindex="0" role="button" aria-label="Aviario">
+                            <circle r="26" />
+                            <text class="mapa__numero" y="9">2</text>
+                            <text class="mapa__etiqueta" y="50">Aviario</text>
+                        </g>
+
+                        <g class="mapa__estacion" data-estacion="felinario" transform="translate(620, 180)"
+                           tabindex="0" role="button" aria-label="Felinario">
+                            <circle r="26" />
+                            <text class="mapa__numero" y="9">3</text>
+                            <text class="mapa__etiqueta" y="50">Felinario</text>
+                        </g>
+
+                        <g class="mapa__estacion" data-estacion="nocturna" transform="translate(770, 290)"
+                           tabindex="0" role="button" aria-label="Casa Nocturna">
+                            <circle r="26" />
+                            <text class="mapa__numero" y="9">4</text>
+                            <text class="mapa__etiqueta" y="50">Casa Nocturna</text>
+                        </g>
+
+                        <g class="mapa__estacion" data-estacion="herpetario" transform="translate(670, 460)"
+                           tabindex="0" role="button" aria-label="Herpetario">
+                            <circle r="26" />
+                            <text class="mapa__numero" y="9">5</text>
+                            <text class="mapa__etiqueta" y="50">Herpetario</text>
+                        </g>
+
+                        <g class="mapa__estacion" data-estacion="cafeteria" transform="translate(460, 480)"
+                           tabindex="0" role="button" aria-label="Cafetería y descanso">
+                            <circle r="26" />
+                            <text class="mapa__numero" y="9">6</text>
+                            <text class="mapa__etiqueta" y="50">Cafetería</text>
+                        </g>
+                    </svg>
+                </div>
+
+                <article class="mapa__panel" aria-live="polite">
+                    <img id="estacion-imagen" class="mapa__imagen" src="img/selva.jpg" alt="">
+                    <p id="estacion-km" class="mapa__km"></p>
+                    <h2 id="estacion-titulo" class="mapa__titulo">Selecciona una estación</h2>
+                    <p id="estacion-descripcion" class="mapa__descripcion">
+                        Toca cualquiera de los puntos numerados del mapa para ver su información.
+                    </p>
+                    <h3 class="mapa__subtitulo">Qué verás aquí</h3>
+                    <ul id="estacion-lista" class="mapa__lista"></ul>
+                </article>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/mapa.js"></script>
+</body>
+</html>

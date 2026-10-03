@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fauna de la reserva | ZooMAT</title>
+    <meta name="description" content="Conoce la fauna emblemática de Chiapas que habita en el ZooMAT: felinos, aves, reptiles y mamíferos de la región.">
+    <meta name="author" content="Leonardo García López">
+
+    <!-- Tipografías de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Cinzel:wght@600;700;900&display=swap" rel="stylesheet">
+
+    <!-- Íconos de Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Nuestros estilos (siempre al final) -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ===== BARRA DE NAVEGACIÓN ===== -->
+    <nav class="navbar">
+        <div class="navbar__contenedor">
+
+            <a href="index.html" class="navbar__logo">
+                <span class="navbar__logo-icono">
+                    <img src="img/jaguar.jpg" alt="">
+                </span>
+                <span>
+                    <span class="navbar__logo-titulo">ZooMAT</span>
+                    <span class="navbar__logo-subtitulo">Reserva El Zapotal</span>
+                </span>
+            </a>
+
+            <button class="navbar__toggle" id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <ul class="navbar__menu" id="menu">
+                <li><a href="mapa.html" class="navbar__link"><i class="fa-solid fa-map"></i> Mapa</a></li>
+                <li><a href="fauna.html" class="navbar__link" aria-current="page"><i class="fa-solid fa-paw"></i> Fauna</a></li>
+                <li><a href="trivia.html" class="navbar__link"><i class="fa-solid fa-graduation-cap"></i> Trivia</a></li>
+                <li><a href="visitanos.html" class="navbar__boton"><i class="fa-solid fa-route"></i> Visítanos</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <!-- ===== CONTENIDO ===== -->
+    <main class="contenido">
+
+        <section id="fauna" class="seccion">
+            <div class="seccion__encabezado">
+                <h1 class="seccion__titulo">Fauna de la reserva</h1>
+                <p class="seccion__intro">
+                    Especies emblemáticas de Chiapas que puedes conocer durante tu recorrido.
+                    Usa los filtros para explorar cada grupo.
+                </p>
+            </div>
+
+            <div class="filtros" role="group" aria-label="Filtrar especies por grupo">
+                <button class="filtro" data-filtro="todos" aria-pressed="true">Todos</button>
+                <button class="filtro" data-filtro="felinos" aria-pressed="false">Felinos</button>
+                <button class="filtro" data-filtro="aves" aria-pressed="false">Aves</button>
+                <button class="filtro" data-filtro="reptiles" aria-pressed="false">Reptiles</button>
+                <button class="filtro" data-filtro="mamiferos" aria-pressed="false">Mamíferos</button>
+            </div>
+
+            <p id="contador-fauna" class="fauna__contador" aria-live="polite"></p>
+
+            <div id="lista-fauna" class="fauna__lista"></div>
+
+            <!-- Plantilla de tarjeta: JavaScript la copia para cada animal -->
+            <template id="plantilla-tarjeta">
+                <article class="tarjeta">
+                    <img class="tarjeta__imagen" src="" alt="">
+                    <div class="tarjeta__cuerpo">
+                        <p class="tarjeta__categoria"></p>
+                        <h2 class="tarjeta__nombre"></h2>
+                        <p class="tarjeta__cientifico"></p>
+                        <p class="tarjeta__descripcion"></p>
+                        <p class="tarjeta__estado"></p>
+                    </div>
+                </article>
+            </template>
+        </section>
+
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/fauna.js"></script>
+</body>
+</html>
